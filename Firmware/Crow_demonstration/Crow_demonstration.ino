@@ -33,12 +33,8 @@ void handleGesture() {
       case DIR_UP:
         ServoStartPosition();
         tailClosed();
-        for (int i = 0; i <= NUMPIXELS; i++) {
-          strip1.setPixelColor(i, 255, 150, 0);
-          strip1.show();
-          strip.setPixelColor(i, 255, 150, 0);
-          strip.show();
-        }
+        YellowEyes();
+        f = 0;
         break;
       case DIR_LEFT:
         //  tailClosed();
@@ -48,8 +44,8 @@ void handleGesture() {
         motor(0);
         break;
       case DIR_RIGHT:
-        //enc1 = 0;
-        motor(30);
+        enc1 = 0;
+        motor(-30);
         while (enc1 > -200);
         motor(0);
         break;
@@ -88,7 +84,7 @@ void setup() {
   colibrate();
 }
 void loop() {
-  f = 1;
+   f = 1;
   EyesMovement();
   Kar();
   Cam();

@@ -1,4 +1,5 @@
 void Actor() {
+  enc1 = 0;
   playerCrow.play(2);
   for (int i = 0; i < 4; i++) {
     while (enc1 < 50) {

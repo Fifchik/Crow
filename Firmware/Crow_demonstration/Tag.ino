@@ -16,7 +16,7 @@ void tag() {
   float errOld, err;
   while (Serial3.available() && flag == 1) {
     static float kP = 1.75;
-    static float k = 0.5;
+    static float k = 0.6;
     static float kd = 0.5;
     int CamOut = Serial3.read();
     errOld = err;

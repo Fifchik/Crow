@@ -29,5 +29,5 @@ void ServoStartPosition() {
   TurnRight.write(180);
   EyeLeft.write(120);
   EyeRight.write(20);
-  Opening.write(20);
+  Opening.write(30);
 }
